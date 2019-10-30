@@ -5,9 +5,11 @@ p1 {
   color: yellow;
 }
 ul {
-
+  list-style-type: none;
+  margin: none;
+  padding: none;
 }
 li {
   display: inline;
-  
+
 }
