@@ -5,11 +5,16 @@ p1 {
   color: yellow;
 }
 ul {
-  list-style-type: none;
-  margin: none;
-  padding: none;
+    width: 100vw;
+    background: yellow;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    list-style-type: none;
 }
-li {
-  display: inline;
 
+li {
+    width: 20%;
+    float: left;
+    margin: 2.5%;
 }
