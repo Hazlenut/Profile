@@ -4,14 +4,7 @@ body {
 p1 {
   color: yellow;
 }
-ul {
-    width: 100vw;
-    background: yellow;
-    padding: 0;
-    margin: 0;
-    overflow: auto;
-    list-style-type: none;
-}
+
 
 li {
     width: 28%;
