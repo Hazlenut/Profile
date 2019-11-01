@@ -1,0 +1,18 @@
+<?xml version="1.0"?><svg width="1280" height="960" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>orange circle</title>
+ <defs>
+  <linearGradient id="linearGradient4554">
+   <stop id="stop4556" stop-color="#ffffff" offset="0"/>
+   <stop id="stop4558" stop-color="#ffffff" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient6025" x1="-0.051092" y1="0.085272" x2="0.335768" y2="0.666667" xlink:href="#linearGradient4554"/>
+ </defs>
+ <metadata id="metadata4">image/svg+xml</metadata>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <path id="path5202" fill="#ff7f00" fill-rule="nonzero" marker-end="none" marker-mid="none" marker-start="none" stroke="white" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0" d="m950.819519,478.421844c0.196594,259.976593 -210.500366,470.833221 -470.47699,470.833221c-259.976685,0 -470.673977,-210.856628 -470.477646,-470.833221c-0.196331,-259.976639 210.500961,-470.832928 470.477646,-470.832928c259.976624,0 470.673584,210.856289 470.47699,470.832928z"/>
+   <path id="path5204" fill="url(#linearGradient6025)" fill-rule="nonzero" marker-end="none" marker-mid="none" marker-start="none" stroke-dashoffset="0" stroke-miterlimit="4" stroke-width="0" d="m480.033142,8.206124c-259.702316,0 -470.396702,210.694404 -470.396508,470.39672c0,124.777466 50.921044,236.278503 130.281381,320.514954c41.229889,-340.525787 328.638657,-605.289154 680.230301,-605.289154c9.479919,0 18.282776,1.924438 27.671509,2.305817c-86.034424,-111.898064 -215.832031,-187.928336 -367.786682,-187.928336z"/>
+  </g>
+ </g>
+</svg>
