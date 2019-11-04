@@ -6,9 +6,10 @@ function Box(obj, container, image) {
   this.image = image;
   this.speed = 100
   this.position = {x: 0, y:0};
+  this.running = false;
 }
 
-Box.prototype.setPosition = function() {
+Box.prototype.newPosition = function() {
   var x = Math.random(this.$container.innerWidth);
   var y = Math.random(this.$container.innerHeight);
   return {x: x, y: y};
@@ -28,10 +29,30 @@ Box.prototype.getDist = function(a,b) {
   return (Math.sqrt(distX *distX + distY * distY));
 }
 
+Box.prototype.moveOnce = function() {
+  var next = this.newPosition();
+  var change = this.getDist(this.position, next);
+  var speed = Math.round((change / this.speed) * 100) / 100;
+  this.$object.style.transition='transform '+speed+'s linear';
+  this.$object.style.transform='translate3d('+next.x+'px, '+next.y+'px, 0)';
+
+  this.position = next;
+
+}
+
+Box.prototype.run = function() {
+  this.$object.willChange = 'transform';
+  this.$object.pointerEvents = 'auto';
+  this.boundEvent = this._moveOnce.bind(this)
+  this.$object.addEventListener('transitionend', this.boundEvent);
+  this.move();
+
+  this.running = true;
+}
 
 
-var = [1,2,3,4,5,6,7];
-var = ["redcircle.png", "orangecircle.png",
+var nums= [1,2,3,4,5,6,7];
+var images= ["redcircle.png", "orangecircle.png",
 "yellowcircle.png", "greencircle.png", "bluecircle.png",
 "purplecircle.png", "pinkcircle.png"];
 
@@ -46,4 +67,12 @@ function shuffleArray(array) {
     array[randI] = tempV;
   }
   return array;
+}
+
+for(int i = 0; i < nums.length; i++) {
+  for(int j = 0; j < nums[i]; j++) {
+      this.setImage(images[i]);
+      var x = new Box(document.getElementById('a'), window);
+      x.start();
+  }
 }
