@@ -1,3 +1,5 @@
+// used as guide http://jsfiddle.net/wry4d9Lt/1/
+// https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
 function Box(obj, container, image) {
   this.$object = obj;
   this.$container = container;
@@ -13,13 +15,19 @@ Box.prototype.setPosition = function() {
 }
 
 Box.prototype.setImage = function(s) {
-  var element = document.createElement('../stylesheet.css');
-  element.style.content = s;
+  $object.style.content = s;
 }
 
 Box.prototype.setSpeed = function() {
   this.speed = Math.random(200) + 100;
 }
+
+Box.prototype.getDist = function(a,b) {
+  var distX = a.x -b.x;
+  var distY = a.y-b.y;
+  return (Math.sqrt(distX *distX + distY * distY));
+}
+
 
 
 var = [1,2,3,4,5,6,7];
