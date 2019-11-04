@@ -16,7 +16,7 @@ Box.prototype.newPosition = function() {
 }
 
 Box.prototype.setImage = function(s) {
-  $object.style.content = s;
+  $object.attr({style: "content:url(../Pictures/" + s + ")" });
 }
 
 Box.prototype.setSpeed = function() {
@@ -68,7 +68,7 @@ function shuffleArray(array) {
   }
   return array;
 }
-
+shuffleArray(images);
 for(int i = 0; i < nums.length; i++) {
   for(int j = 0; j < nums[i]; j++) {
       this.setImage(images[i]);
