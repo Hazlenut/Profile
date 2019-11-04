@@ -43,7 +43,7 @@ Box.prototype.moveOnce = function() {
 Box.prototype.run = function() {
   this.$object.willChange = 'transform';
   this.$object.pointerEvents = 'auto';
-  this.boundEvent = this._moveOnce.bind(this)
+  this.boundEvent = this.move.bind(this)
   this.$object.addEventListener('transitionend', this.boundEvent);
   this.move();
 
