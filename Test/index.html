@@ -5,9 +5,25 @@
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
   </head>
   <body onload = "myFunction()">
-      <script type="text/javascript" src="../Scripts/move.js"></script>
-      <button onload="start();"></button>
-    <!-- Add button that calls javascript and css --!>
+    <a href='linkhref.html' id='mylink'></a>
+
+<script type="text/javascript">
+
+var myLink = document.getElementById('mylink');
+
+  myLink.onclick = function(){
+
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "../Scripts/move.js.";
+  document.getElementsByTagName("body")[0].appendChild(script);
+  return false;
+
+}
+
+
+</script>
+
   </body>
 
 </html>
