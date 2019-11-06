@@ -74,7 +74,7 @@ for(int i = 0; i < nums.length; i++) {
   for(int j = 0; j < nums[i]; j++) {
 
       var x = new Box(document.getElementById('a'), window,images[i]);
-      x.start();
+      x.run();
   }
 }
 }
