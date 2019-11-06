@@ -15,8 +15,8 @@ Box.prototype.newPosition = function() {
   return {x: x, y: y};
 }
 
-Box.prototype.setImage = function(s) {
-  $object.attr({style: "content:url(../Pictures/" + s + ")" });
+Box.prototype.setImage = function() {
+  $object.attr({style: "content:url(../Pictures/" + this.image + ")" });
 }
 
 Box.prototype.setSpeed = function() {
@@ -72,8 +72,8 @@ function start() {
 shuffleArray(images);
 for(int i = 0; i < nums.length; i++) {
   for(int j = 0; j < nums[i]; j++) {
-      this.setImage(images[i]);
-      var x = new Box(document.getElementById('a'), window);
+
+      var x = new Box(document.getElementById('a'), window,images[i]);
       x.start();
   }
 }
