@@ -68,6 +68,7 @@ function shuffleArray(array) {
   }
   return array;
 }
+function start() {
 shuffleArray(images);
 for(int i = 0; i < nums.length; i++) {
   for(int j = 0; j < nums[i]; j++) {
@@ -75,4 +76,5 @@ for(int i = 0; i < nums.length; i++) {
       var x = new Box(document.getElementById('a'), window);
       x.start();
   }
+}
 }
