@@ -33,7 +33,7 @@ Box.prototype.getDist = function(a,b) {
   return (Math.sqrt(distX *distX + distY * distY));
 }
 
-Box.prototype.moveOnce = function() {
+Box.prototype.move = function() {
   var next = this.newPosition();
   var change = this.getDist(this.position, next);
   var speed = Math.round((change / this.speed) * 100) / 100;
