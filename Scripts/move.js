@@ -1,5 +1,9 @@
 // used as guide http://jsfiddle.net/wry4d9Lt/1/
 // https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
+$(document).ready(function(){
+    start();
+
+});
 function Box(obj, container, image) {
   this.$object = obj;
   this.$container = container;
@@ -46,8 +50,6 @@ Box.prototype.run = function() {
   this.boundEvent = this.move.bind(this)
   this.$object.addEventListener('transitionend', this.boundEvent);
   this.move();
-
-  this.running = true;
 }
 
 
@@ -78,3 +80,4 @@ for(int i = 0; i < nums.length; i++) {
   }
 }
 }
+window.onload = start;
