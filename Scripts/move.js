@@ -50,8 +50,8 @@ Box.prototype.run = function() {
 
 
 var nums= [1,2,3,4,5,6,7];
-var images= ["redcircle.png", "orangecircle.png",
-"yellowcircle.png", "greencircle.png", "bluecircle.png",
+var images= ["redcircle.png", "orangecircle.svg",
+"yellowcircle.jpg", "greencircle.svg", "bluecircle.png",
 "purplecircle.png", "pinkcircle.png"];
 
 function shuffleArray(array) {
