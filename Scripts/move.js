@@ -20,7 +20,7 @@ Box.prototype.newPosition = function() {
 }
 
 Box.prototype.setImage = function() {
-  $object.attr({style: "content:url(../Pictures/" + this.image + ")" });
+   document.getElementById("a").content.url="../Pictures/" + this.image;
 }
 
 Box.prototype.setSpeed = function() {
