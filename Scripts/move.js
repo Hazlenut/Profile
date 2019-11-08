@@ -80,6 +80,4 @@ for(int i = 0; i < nums.length; i++) {
   }
 }
 }
-(function () {
-    start();
-})();
+window.onload = start;
