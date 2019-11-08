@@ -16,7 +16,7 @@ Box.prototype.newPosition = function() {
 }
 
 Box.prototype.setImage = function() {
-   document.getElementById("a").content.url="../Pictures/" + this.image;
+   this.$object.content.url="../Pictures/" + this.image;
 }
 
 Box.prototype.setSpeed = function() {
