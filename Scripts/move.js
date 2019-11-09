@@ -16,7 +16,7 @@ Box.prototype.newPosition = function() {
 }
 
 Box.prototype.setImage = function() {
-   document.getElementById("a").content.url="../Pictures/" + this.image;
+   this.$object.content.url="../Pictures/" + this.image;
 }
 
 Box.prototype.setSpeed = function() {
@@ -50,8 +50,8 @@ Box.prototype.run = function() {
 
 
 var nums= [1,2,3,4,5,6,7];
-var images= ["redcircle.png", "orangecircle.png",
-"yellowcircle.png", "greencircle.png", "bluecircle.png",
+var images= ["redcircle.png", "orangecircle.svg",
+"yellowcircle.jpg", "greencircle.svg", "bluecircle.png",
 "purplecircle.png", "pinkcircle.png"];
 
 function shuffleArray(array) {
@@ -76,4 +76,4 @@ for(int i = 0; i < nums.length; i++) {
   }
 }
 }
-window.load = start;
+window.onload = start;
