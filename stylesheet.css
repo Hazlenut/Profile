@@ -37,6 +37,9 @@ p5 {
   margin-left: -50px; /* margin is -0.5 * dimension */
   margin-top: -25px;
 }
+.center2 {
+  align-content: center;
+}
 
 div#a {
   width: 50px;
