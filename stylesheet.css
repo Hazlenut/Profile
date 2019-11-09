@@ -37,7 +37,14 @@ p5 {
   margin-left: -50px; /* margin is -0.5 * dimension */
   margin-top: -25px;
 }
-
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  > li {
+    float: none;
+    display: inline-block;
+  }
+}
 
 div#a {
   width: 50px;
