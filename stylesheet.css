@@ -5,12 +5,21 @@ p1 {
   color: yellow;
 }
 
-
+background {
+  background-image:url("Pictures/selfportrait.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 90%
+  background-size: cover;
+  
+}
 li {
-  width: 28%;
+  width: 0%;
   float: left;
-  margin-left: 18%;
-  margin-right: -35%;
+  margin-inline-start: 23%;
+    margin-inline-end: -7%;
+    display: block;
 }
 
 h5 {
