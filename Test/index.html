@@ -8,11 +8,10 @@
     <input type: "password" id = "question"> </input>
     <button onclick="pass()">Submit</button>
     <script>
-      var value = document.getElementById("question");
+      var value = document.getElementById("question").value;
       function pass() {
         if(value === "admin") {
           window.location="../Test";
-
         }else{
           window.location="../Home";
           alert("Wrong password");
