@@ -44,7 +44,7 @@ Box.prototype.run = function() {
   this.$object.willChange = 'transform';
   this.$object.pointerEvents = 'auto';
   this.boundEvent = this.move.bind(this)
-  this.$object.addEventListener('transitioned', this.boundEvent);
+  this.$object.addEventListener('transitionend', this.boundEvent);
   this.move();
 }
 
