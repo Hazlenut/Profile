@@ -44,7 +44,7 @@ Box.prototype.run = function() {
   this.$object.willChange = 'transform';
   this.$object.pointerEvents = 'auto';
   this.boundEvent = this.move.bind(this)
-  this.$object.addEventListener('transitionend', this.boundEvent);
+  this.$object.addEventListener('transitioned', this.boundEvent);
   this.move();
 }
 
@@ -70,10 +70,10 @@ function start() {
 shuffleArray(images);
 for(int i = 0; i < nums.length; i++) {
   for(int j = 0; j < nums[i]; j++) {
-
       var x = new Box(document.getElementById('a'), window,images[i]);
       x.run();
   }
 }
 }
+var y = new Box(document.getElementById('a'),window,images[2]);
 window.onload = start;

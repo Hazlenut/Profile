@@ -12,6 +12,7 @@ p1 {
   background-repeat: no-repeat;
   height: 90%
   background-size: cover;
+  display: block;
 
 }
 li {
