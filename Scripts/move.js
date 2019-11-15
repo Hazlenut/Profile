@@ -76,4 +76,6 @@ for(int i = 0; i < nums.length; i++) {
 }
 }
 var y = new Box(document.getElementById('a'),window,images[2]);
-window.onload = start;
+window.onload = function() {
+  alert("working");
+}
