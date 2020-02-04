@@ -1,59 +1,47 @@
 // used as guide http://jsfiddle.net/wry4d9Lt/1/
 // https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
-function Box(obj, container) {
+function Shiba(obj, container) {
 	this.$object = obj;
   this.$container = container;
-  this.container_is_window = container === window;
-  this.pixels_per_second = 200;
-  this.current_position = { x: Math.random() *this.$container.innerHeight, y: Math.random()*this.$container.innerWidth };
+  this.speed= 250;
+  this.startingPos = { x: Math.random() *this.$container.innerHeight, y: Math.random()*this.$container.innerWidth };
 
 }
 
-Box.prototype.setSpeed = function(pxPerSec) {
-	this.pixels_per_second = pxPerSec;
-}
 
-Box.prototype._getContainerDimensions = function() {
-   if (this.$container === window) {
-       return { 'height' : this.$container.innerHeight, 'width' : this.$container.innerWidth };
-   } else {
-   	   return { 'height' : this.$container.clientHeight, 'width' : this.$container.clientWidth };
-   }
-}
+Shiba.prototype.makePosition = function() {
 
-Box.prototype._generateNewPosition = function() {
-
-  var containerSize = this._getContainerDimensions();
-	var availableHeight = containerSize.height - this.$object.clientHeight;
-  var availableWidth = containerSize.width - this.$object.clientHeight;
-  var y = Math.floor(Math.random() * availableHeight);
-  var x = Math.floor(Math.random() * availableWidth);
+	var screenHeight = this.$container.innerHeight - this.$object.clientHeight;
+  var screenWidth = this.$container.innerWidth - this.$object.clientHeight;
+  var y = Math.floor(Math.random() * screenHeight);
+  var x = Math.floor(Math.random() * screenWidth);
   return { x: x, y: y };
-}
-
-Box.prototype._calcDelta = function(a, b) {
-	var dx   = a.x - b.x;
-  var dy   = a.y - b.y;
-  var dist = Math.sqrt( dx*dx + dy*dy );
-  return dist;
-}
-
-Box.prototype._moveOnce = function() {
-    var next = this._generateNewPosition();
-    var delta = this._calcDelta(this.current_position, next);
-		var speed = Math.round((delta / this.pixels_per_second) * 100) / 100;
-    this.$object.style.transition='transform '+speed+'s linear';
-    this.$object.style.transform='translate3d('+next.x+'px, '+next.y+'px, 0)';
-    this.current_position = next;
 };
 
-Box.prototype.start = function() {
+Shiba.prototype.distance = function(a, b) {
+	var x  = a.x - b.x;
+  var y   = a.y - b.y;
+  var dist = Math.sqrt(x*x + y*y);
+  return dist;
+};
+
+Shiba.prototype.move = function() {
+    var next = this.makePosition();
+    var dist = this.distance(this.startingPos, next);
+		var speed = Math.round((dist/this.speed)*100)/((Math.random() * 25) + 75);
+    this.$object.style.transition='transform '+speed+'s linear';
+		//cubic-bezier(.17,.67,.83,.67)
+    this.$object.style.transform='translate3d('+next.x+'px, '+next.y+'px, 0)';
+    this.startingPos = next;
+};
+
+Shiba.prototype.start = function() {
   this.$object.willChange = 'transform';
   this.$object.pointerEvents = 'auto';
-  this.boundEvent = this._moveOnce.bind(this)
+  this.boundEvent = this.move.bind(this);
   this.$object.addEventListener('transitionend', this.boundEvent);
-  this._moveOnce();
-}
+  this.move();
+};
 
 function shuffleArray(array) {
   var currentI = array.length;
@@ -67,21 +55,44 @@ function shuffleArray(array) {
   }
   return array;
 }
+
 function choose(choices) {
   var i = Math.floor(Math.random() * choices.length);
   return choices[i];
 }
-var colors = ['green','red','blue','yellow','purple','pink','orange'];
+
+function setImage(id,color) {
+	//console.log(id + " setting image: " + color);
+	if(color === 'red') {
+		document.getElementById(id).style.backgroundImage = "url(https://i.imgur.com/XFxT6ZG.png)";
+		//console.log("red image");
+	}else if(color === 'blue') {
+		document.getElementById(id).style.backgroundImage = "url(https://i.imgur.com/denVKF6.png)";
+		//console.log("blue image");
+	}else if(color === 'green') {
+		document.getElementById(id).style.backgroundImage = "url(https://i.imgur.com/7kXSa7L.png)";
+		//console.log("green");
+	}else if(color === 'pink') {
+		document.getElementById(id).style.backgroundImage = "url(https://i.imgur.com/dapeuGz.png)";
+	}else if(color === 'brown') {
+		document.getElementById(id).style.backgroundImage = "url(https://i.imgur.com/5KxHPXg.png)";
+	}else if(color === 'yellow'){
+		document.getElementById(id).style.backgroundImage = "url(https://i.imgur.com/B6F3RGt.png)";
+	}
+}
+
+var colors = ['green','red','blue','pink', 'brown', 'yellow'];
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 colors = shuffleArray(colors);
 var c = colors.pop();
-document.getElementById('button').style.backgroundColor = c;
-var z = new Box(document.getElementById('button'),window);
+document.getElementById('button').style.color = c;
+setImage('button',c);
+var z = new Shiba(document.getElementById('button'),window);
 z.start();
 
 
 for(var i = 0; i < letters.length-1; i++) {
-  document.getElementById(letters[i]).style.backgroundColor = choose(colors);
-  var x = new Box(document.getElementById(letters[i]), window);
+	setImage(letters[i],choose(colors));
+  var x = new Shiba(document.getElementById(letters[i]), window);
   x.start();
 }
