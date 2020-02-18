@@ -1,63 +1,218 @@
 body {
   background-color: lightblue;
+  margin: 0 auto;
 }
 p1 {
   color: yellow;
 }
 
-.background {
-  background-image:url("Pictures/selfportrait.jpg");
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 90%
-  background-size: cover;
-  display: block;
-
+ul {
+  display: inline-block;
 }
 li {
-  width: 0%;
-  float: left;
-  margin-inline-start: 23%;
-    margin-inline-end: -7%;
-    display: block;
+  display: inline-block;
+  float: left
 }
 
+h4 {
+  align-content: center;
+  font-size: 50px;
+  margin-top:20%;
+  font-weight: bold;
+}
 h5 {
   align-content: center;
-  font-size:36px;
+  font-size:75px;
+  margin-top: 13%;
+  font-weight: bold;
+
 }
 p5 {
   align-content: center;
-  font-size: 20px;
+  font-size: 30px;
 }
-.center {
-  position: absolute;
-  width: 500px;
-  height: 50px;
-  top: 50%;
-  left: 40%;
-  margin-left: -50px; /* margin is -0.5 * dimension */
-  margin-top: -25px;
+
+.textdown{
+  margin-top: 1%;
 }
-.center1 {
-  position: absolute;
-  width: 500px;
-  height: 50px;
-  top: 40%;
-  left: 40%;
-  margin-left: -50px; /* margin is -0.5 * dimension */
-  margin-top: -25px;
-}
+
 .navbar-nav {
-  width: 100%;
+  width: auto;
+  left: 0px;
+  right: 0px;
   text-align: center;
+  position: absolute;
+}
+.navbar {
+  height: 100px;
+}
+.nav-text {
+  font-size: 50px;
 }
 
 div#a {
-  width: 50px;
-  height:50px;
-  background-color:red;
-  position:absolute;
-  content:url("redcircle.png");
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#b {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#c {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#d {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#e {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#f {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#g {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#h {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#i {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#j {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#k {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#l {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#m {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#n {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#o {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#p {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#q {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#r {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#s {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#t {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#u {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#v {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#w {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#x {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+div#y {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+.button {
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+}
+.proj {
+  background-color: #d3d3d3;
+  display: block;
+  margin-left: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width:600px;
 }

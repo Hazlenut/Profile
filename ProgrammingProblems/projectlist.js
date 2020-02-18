@@ -34,6 +34,7 @@ function readTextFile(name) {
             var txt = file.responseText;
             var lines = txt.split('\n');
             console.log("here");
+            console.log(lines.length);
             for(var i = 0; i < lines.length; i++) {
               problems.push(lines[i]);
             }
@@ -44,6 +45,7 @@ function readTextFile(name) {
 }
 function listproblems() {
   readTextFile("proglist.txt");
+  console.log("we made it");
   for(var i = 0; i < problems.length; i++) {
     console.log(problems[i]);
   }

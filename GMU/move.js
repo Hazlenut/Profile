@@ -1,13 +1,31 @@
 // used as guide http://jsfiddle.net/wry4d9Lt/1/
 // https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
-function Shiba(obj, container) {
+function Shiba(obj, container, letter) {
 	this.$object = obj;
   this.$container = container;
   this.speed= 250;
+	// right - 1 up - 2 left - 3 down - 4
+	this.direction = 1;
+	this.letter = letter;
   this.startingPos = { x: Math.random() *this.$container.innerHeight, y: Math.random()*this.$container.innerWidth };
 
 }
 
+function flipImage(obj) {
+	if (obj.direction == 1) {
+		document.getElementById(obj.letter).style["-webkit-transform"] = "scaleX(1)";
+	} else if(obj.direction == 3) {
+		document.getElementById(obj.letter).style["-webkit-transform"] = "scaleX(-1)";
+	}
+}
+
+Shiba.prototype.imageDirection = function(a,b) {
+	if(a.x <= b.x) {
+		this.direction = 1;
+	}else{
+		this.direction = 3;
+	}
+};
 
 Shiba.prototype.makePosition = function() {
 
@@ -26,13 +44,16 @@ Shiba.prototype.distance = function(a, b) {
 };
 
 Shiba.prototype.move = function() {
-    var next = this.makePosition();
-    var dist = this.distance(this.startingPos, next);
+    var nextPos = this.makePosition();
+    var dist = this.distance(this.startingPos, nextPos);
 		var speed = Math.round((dist/this.speed)*100)/((Math.random() * 25) + 75);
+		this.imageDirection(this.startingPos, nextPos);
+		flipImage(this);
     this.$object.style.transition='transform '+speed+'s linear';
 		//cubic-bezier(.17,.67,.83,.67)
-    this.$object.style.transform='translate3d('+next.x+'px, '+next.y+'px, 0)';
-    this.startingPos = next;
+    this.$object.style.transform='translate3d('+nextPos.x+'px, '+nextPos.y+'px, 0)';
+    this.startingPos = nextPos;
+		console.log(this.letter + " " + document.getElementById(this.letter).style.webkitTransform);
 };
 
 Shiba.prototype.start = function() {
@@ -81,18 +102,19 @@ function setImage(id,color) {
 	}
 }
 
+
 var colors = ['green','red','blue','pink', 'brown', 'yellow'];
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 colors = shuffleArray(colors);
 var c = colors.pop();
 document.getElementById('button').style.color = c;
 setImage('button',c);
-var z = new Shiba(document.getElementById('button'),window);
+var z = new Shiba(document.getElementById('button'),window, 'button');
 z.start();
 
 
 for(var i = 0; i < letters.length-1; i++) {
 	setImage(letters[i],choose(colors));
-  var x = new Shiba(document.getElementById(letters[i]), window);
+  var x = new Shiba(document.getElementById(letters[i]), window, letters[i]);
   x.start();
 }
