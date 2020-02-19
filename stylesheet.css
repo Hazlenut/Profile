@@ -61,23 +61,32 @@ p5 {
 
 .box1 {
   background-color: #05386B;
+  background-image: url("https://i.imgur.com/U1pspi2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   margin-left: 15px;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
 }
 
 .box2 {
   background-color: #05386B;
+  background-image: url("https://i.imgur.com/3K1PJcR.png");
+  background-repeat: no-repeat;
+  background-position: center;
   margin-left: 15px;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
 }
 
 .box3 {
   background-color: #05386B;
+  background-image: url("https://i.imgur.com/0LARhJs.png");
+  background-repeat: no-repeat;
+  background-position: center;
   margin-left: 15px;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
 }
 
 div#a {

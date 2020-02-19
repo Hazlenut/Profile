@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-center">
     <ul class="navbar-nav d-flex justify-content-around">
       <li class="nav-item">
         <a class="nav-link bold-nav nav-text" href="/Home">Home <span class="sr-only">(current)</span></a>
@@ -24,11 +24,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <div id = "mylist">
-    <h3>
-      Test
-    </h3>
-  </div>
   <script type="text/javascript">
   function createTitles() {
     titles = ['https://github.com/Hazlenut/Programming-Problems','https://github.com/Hazlenut/Profile','https://github.com/Hazlenut/FinalProject'];
@@ -37,7 +32,7 @@
       box.className = "proj mx-auto";
       var linkd = titles[i].split("/");
       box.innerHTML = linkd[linkd.length-1].replace("-", " ");
-      box.onclick = openLink(titles[i]);
+      box.onclick = () => openLink(titles[i]);
       document.getElementById("mylist").appendChild(box);
     }
   }
