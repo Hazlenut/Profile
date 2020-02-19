@@ -246,9 +246,10 @@ div#y {
 	position:absolute;
 }
 .proj {
-  background-color: #d3d3d3;
+  background-color: #379683;
   display: block;
   margin-left: auto;
+  margin-top: 5%;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 25px;
