@@ -29,15 +29,32 @@ h5 {
 
 
 }
+p1 {
+  font-size: 15px;
+  text-decoration: underline;
+  color: black;
+
+}
 p5 {
   align-content: center;
   font-size: 30px;
 }
 
-.namecolor {
+.proj:hover {
+  background-color: #1f541f;
+}
+
+.darkgreencolor {
   background-color: #379683;
   padding-top: 1%;
   padding-bottom: 7%;
+}
+
+.lightgreencolor {
+  background-color: #5CDB95;
+  padding: 100px;
+  padding-top: 1%;
+  padding-bottom: 3%;
 }
 
 .textdown{
