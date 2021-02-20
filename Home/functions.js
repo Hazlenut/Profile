@@ -12,11 +12,8 @@ function moveboxback() {
   element.classList.remove("moveleft");
   element.classList.add("moveback");
   document.getElementById("backbutton").style.display = "none";
-  var resume = document.getElementById("theresume");
-  resume.classList.remove("startfadein");
-  resume.classList.add("startfadeout");
-  resume.style.display="none";
-  resume.style.visibility="hidden";
+  closeresume();
+  closeprojects();
 }
 function openresume() {
   var element = document.getElementById("theresume");
@@ -24,4 +21,72 @@ function openresume() {
   element.classList.remove("startfadeout");
   element.classList.add("startfadein");
   element.style.visibility = "visible";
+  closeprojects();
 }
+function closeresume() {
+  var resume = document.getElementById("theresume");
+  resume.classList.remove("startfadein");
+  resume.classList.add("startfadeout");
+  resume.style.display="none";
+  resume.style.visibility="hidden";
+}
+function openprojects() {
+  var element = document.getElementById("theprojects");
+  element.style.display = "block";
+  element.classList.remove("startfadeout");
+  element.classList.add("startfadein");
+  element.style.visibility = "visible";
+  closeresume();
+}
+function closeprojects() {
+  var projects = document.getElementById("theprojects");
+  projects.classList.remove("startfadein");
+  projects.classList.add("startfadeout");
+  projects.style.display="none";
+  projects.style.visibility="hidden";
+}
+function openProjectsTitle() {
+  var element = document.getElementById("")
+}
+$(document).ready(function() {
+  $("#b1").hover(function() {
+    $("#title1").css("display","block");
+  }, function() {
+    $("#title1").css("display","none");
+  });
+});
+$(document).ready(function() {
+  $("#b2").hover(function() {
+    $("#title2").css("display","block");
+  }, function() {
+    $("#title2").css("display","none");
+  });
+});
+$(document).ready(function() {
+  $("#b3").hover(function() {
+    $("#title3").css("display","block");
+  }, function() {
+    $("#title3").css("display","none");
+  });
+});
+$(document).ready(function() {
+  $("#b4").hover(function() {
+    $("#title4").css("display","block");
+  }, function() {
+    $("#title4").css("display","none");
+  });
+});
+$(document).ready(function() {
+  $("#b5").hover(function() {
+    $("#title5").css("display","block");
+  }, function() {
+    $("#title5").css("display","none");
+  });
+});
+$(document).ready(function() {
+  $("#b6").hover(function() {
+    $("#title6").css("display","block");
+  }, function() {
+    $("#title6").css("display","none");
+  });
+});

@@ -21,7 +21,6 @@
   background-color: black;
 }
 .box1 {
-  background-image: url("../Home/invertedmail.png");
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 15px;
@@ -30,7 +29,6 @@
 }
 
 .box2 {
-  background-image: url("../Home/invertedgithub.png");
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 15px;
@@ -79,9 +77,29 @@
   padding: 17.4% 20%;
   height: 5%;
 }
+.flex {
+  display: flex;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
 .resume {
   top: 30%;
   left: 60%;
+}
+.resumestuff {
+  visibility: hidden;
+  width: 30%;
+  height: 76%;
+  top: 12%;
+  display: none;
+  left: 50%;
+  position: fixed;
+}
+.backbuttonstuff {
+  color: white;
+  display: none;
 }
 .link {
   font-size:15px;
@@ -150,4 +168,81 @@
   100% {
     opacity: 0;
   }
+}
+.block1 {
+  position: fixed;
+  top: 20%;
+  left: 64%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.8);
+}
+.block:hover{
+  animation: expand 0.5s forwards;
+}
+@keyframes expand {
+  0% {
+    width: 2%;
+    height: 10%;
+  }
+  100% {
+    width: 3%;
+    height: 13%;
+  }
+}
+.block2 {
+  position: fixed;
+  top: 20%;
+  left: 66%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+}
+.block3 {
+  position: fixed;
+  top: 20%;
+  left: 68%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.6);
+}
+.block4 {
+  position: fixed;
+  top: 20%;
+  left: 70%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+}
+.block5 {
+  position: fixed;
+  top: 20%;
+  left: 72%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.4);
+}
+.block6 {
+  position: fixed;
+  top: 20%;
+  left: 74%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.3);
+}
+.projectstitle {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: white;
+  top: 12%;
+  left: 66%;
+  position: fixed;
+  display: none;
 }
