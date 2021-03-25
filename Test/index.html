@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> LOGIN </title>
+  </head>
+  <body>
+    <label> Password: </label>
+    <input type ="text" id = "question">
+    <button onclick="pass()">Submit</button>
+    <script>
+      function pass() {
+        var value = document.getElementById("question").value;
+        if(value === "admin") {
+          window.location="../Test/testing.html";
+        }else{
+          window.location="../Home";
+          alert("Wrong password");
+        }
+      }
+      </script>
+    </body>
+    </html>

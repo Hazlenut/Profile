@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>William Wung</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheet2.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body class="blackbg">
+
+
+</div>
+  <div class="bg">
+    <video loop muted autoplay class="bg">
+      <source src="shortcyberpunk2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="mainbox" class="mainbox">
+
+    <div class="row no-gutters">
+      <div class="col-xl-8 lightblue">
+        <div class="left">
+          <span class="nameCard">William Wung</span>
+          <br>
+          <br>
+          <span style="color: white"> Undergraduate Computer Science Student </span>
+          <div class="button-group flex">
+            <a target="_blank" href="mailto:willie.wung@gmail.com">
+              <div class="box1"><img src="invertedmail.png" class="icon"></div>
+            </a>
+            <a target="_blank" href="https://www.github.com/hazlenut">
+              <div class="box2"><img src="invertedgithub.png" class="icon"></div>
+            </a>
+            <a target="_blank" href="https://mason.gmu.edu/~wwung">
+              <div class="box3"> </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 right">
+        <ul class="closegap">
+          <div id="abouttag" class="lightpurple1 bars aboutme">
+            <button onclick="movebox(); goback()" class="link activate">About Me </button>
+          </div>
+          <div id="projectstag" class="lightpurple1 bars projects">
+            <button onclick="movebox(); goback(); openprojects()" class="link activate" href="/Projects">Projects</button>
+          </div>
+          <div id="resumetag" class="lightpurple1 bars resume">
+            <button onclick="movebox(); goback(); openresume()" class="link activate" target="_blank" href="/Resume/Resume.pdf">Resume</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="theprojects" style="display: none">
+    <div id="title1" class = "projectstitle">
+      <p class="center"> Profile </p>
+    </div>
+    <div id="title2" class = "projectstitle">
+      <p class="center"> Programming Problems </p>
+    </div>
+    <div id="title3" class = "projectstitle">
+      <p> title3 </p>
+    </div>
+    <div id="title4" class = "projectstitle">
+      <p> title4 </p>
+    </div>
+    <div id="title5" class = "projectstitle">
+      <p> title5 </p>
+    </div>
+    <div id="title6" class = "projectstitle">
+      <p> title6 </p>
+    </div>
+    <div>
+      <button id="b1" onclick="block1On()" class="block number1 block1">1</button>
+    </div>
+    <div>
+      <button id="b2" class="block number2 block2"> 2 </button>
+    </div>
+    <div>
+      <button id="b3" class="block number3 block3"> 3 </button>
+    </div>
+    <div>
+      <button id="b4" class="block number4 block4"> 4 </button>
+    </div>
+    <div>
+      <button id="b5" class="block number5 block5"> 5 </button>
+    </div>
+    <div>
+      <button id="b6" class="block number6 block6"> 6 </button>
+    </div>
+  </div>
+  <div>
+    <embed id="theresume" src="../Resume/Resume.pdf#toolbar=0" class = "resumestuff"></embed>
+  </div>
+  <div>
+    <button id="backbutton" onclick="moveboxback()" class="back link backbuttonstuff">back</button>
+  </div>
+  <script src="functions.js"></script>
+
+</body>
+
+</html>

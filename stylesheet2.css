@@ -1,0 +1,286 @@
+.mainbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.nameCard {
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: white;
+}
+.bg {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bgload {
+  position: fixed;
+  overflow: hidden;
+  width: 30%;
+  height: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blackbg {
+  background-color: black;
+}
+.box1 {
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 15px;
+  width: 45px;
+  height: 45px;
+}
+
+.box2 {
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 15px;
+  width: 45px;
+  height: 45px;
+}
+
+.box3 {
+  background-image: url("https://i.imgur.com/0LARhJs.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 15px;
+  width: 45px;
+  height: 45px;
+}
+.button-group {
+  padding-top:24px;
+}
+
+.lightblue {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 25px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.5);
+  height: 30%;
+}
+.lightpurple1 {
+  background-color: rgba(255,255,255,0.5);
+  height: 10%;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.5);
+}
+.closegap {
+  padding: 0px;
+}
+.left {
+  padding: 5% 7%;
+  height: 15%;
+}
+.right {
+  padding: 0px;
+  height: 15%;
+}
+.bars {
+  padding: 17.4% 20%;
+  height: 5%;
+}
+.flex {
+  display: flex;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  position: fixed;
+  margin-left: center;
+  margin-right: center;
+
+}
+.pikachu {
+  height: 50%;
+  width: 50%;
+  position: fixed;
+  left: 45%;
+  top: 45%;
+}
+.resume {
+  top: 30%;
+  left: 60%;
+}
+.resumestuff {
+  visibility: hidden;
+  width: 30%;
+  height: 76%;
+  top: 12%;
+  display: none;
+  left: 50%;
+  position: fixed;
+}
+.backbuttonstuff {
+  color: white;
+  display: none;
+}
+.link {
+  font-size:15px;
+  font-weight:500;
+  padding:0;
+  margin:0;
+  border:none;
+  background: none
+
+}
+.activate:active{
+  transition: moveleft;
+}
+.moveleft {
+  animation: moving 2s forwards;
+}
+@keyframes moving {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 50%;
+    left: 25%;
+  }
+}
+.backed:active {
+  transition: moveback;
+}
+.moveback {
+  animation: movingback 2s forwards;
+}
+@keyframes movingback {
+  0% {
+    top: 50%;
+    left: 25%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+.back {
+  position: fixed;
+  top: 1%;
+  left: 95%;
+}
+.startfadein {
+  animation: fadein 2s forwards;
+}
+.startfadeout {
+  animation: fadeout 2s forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.block1 {
+  position: fixed;
+  top: 20%;
+  left: 64%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.8);
+}
+.block:hover{
+  animation: expand 0.5s forwards;
+}
+@keyframes expand {
+  0% {
+    width: 2%;
+    height: 10%;
+  }
+  100% {
+    width: 3%;
+    height: 13%;
+  }
+}
+.block2 {
+  position: fixed;
+  top: 20%;
+  left: 66%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+}
+.block3 {
+  position: fixed;
+  top: 20%;
+  left: 68%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.6);
+}
+.block4 {
+  position: fixed;
+  top: 20%;
+  left: 70%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+}
+.block5 {
+  position: fixed;
+  top: 20%;
+  left: 72%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.4);
+}
+.block6 {
+  position: fixed;
+  top: 20%;
+  left: 74%;
+  width: 2%;
+  height: 10%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.3);
+}
+.projectstitle {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: white;
+  top: 12%;
+  left: 66%;
+  position: fixed;
+  display: none;
+}
+.center {
+  text-align: center;
+}
