@@ -97,11 +97,9 @@ $(document).ready(function() {
     $("#title6").css("display","none");
   });
 });
-<<<<<<< HEAD
+
 $(document).ready( function() {
 $("#loading").on("load", () => {
   $(".opener").css("animation", "fadeOut 5s forwards")
 });
 });
-=======
->>>>>>> ad062fd8f24fd9f11432e70186efbb0c3a6fef9c
