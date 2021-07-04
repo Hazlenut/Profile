@@ -39,7 +39,7 @@
       <div class="col-xl-4 right">
         <ul class="closegap">
           <div id="abouttag" class="lightpurple1 bars aboutme">
-            <button onclick="movebox(); goback()" class="link activate">About Me </button>
+            <button onclick="movebox(); goback(); openaboutme()" class="link activate">About Me </button>
           </div>
           <div id="projectstag" class="lightpurple1 bars projects">
             <button onclick="movebox(); goback(); openprojects()" class="link activate" href="/Projects">Projects</button>
@@ -51,6 +51,14 @@
       </div>
     </div>
   </div>
+  <div id="theaboutme" style="display: none">
+    <p class="aboutmetext"> My name is William Wung and I am an undergraduate Computer Science
+    Student at George Mason University. Projects I enjoy working on are Discord bots and IOS apps. Also, I have worked
+  with a bit of machine learning, specifically computer vision. Currently, I am spending most of my time working on any projects I come up
+with or LeetCode problems. If I am not coding, I am usually talking with friends or trying to learn something new.</p>
+  </div>
+
+
   <div id="theprojects" style="display: none">
     <div id="title1" class = "projectstitle">
       <p class="center"> Profile </p>

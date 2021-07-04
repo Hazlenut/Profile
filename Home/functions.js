@@ -14,6 +14,7 @@ function moveboxback() {
   document.getElementById("backbutton").style.display = "none";
   closeresume();
   closeprojects();
+  closeaboutme();
 }
 function openresume() {
   var element = document.getElementById("theresume");
@@ -22,6 +23,7 @@ function openresume() {
   element.classList.add("startfadein");
   element.style.visibility = "visible";
   closeprojects();
+  closeaboutme();
 }
 function closeresume() {
   var resume = document.getElementById("theresume");
@@ -30,6 +32,22 @@ function closeresume() {
   resume.style.display="none";
   resume.style.visibility="hidden";
 }
+function openaboutme() {
+  var element = document.getElementById("theaboutme");
+  element.style.display = "block";
+  element.classList.remove("startfadeout");
+  element.classList.add("startfadein");
+  element.style.visibility = "visible";
+  closeprojects();
+  closeresume();
+}
+function closeaboutme() {
+  var projects = document.getElementById("theaboutme");
+  projects.classList.remove("startfadein");
+  projects.classList.add("startfadeout");
+  projects.style.display="none";
+  projects.style.visibility="hidden";
+}
 function openprojects() {
   var element = document.getElementById("theprojects");
   element.style.display = "block";
@@ -37,6 +55,7 @@ function openprojects() {
   element.classList.add("startfadein");
   element.style.visibility = "visible";
   closeresume();
+  closeaboutme();
 }
 function closeprojects() {
   var projects = document.getElementById("theprojects");

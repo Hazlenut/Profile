@@ -286,3 +286,14 @@
 .center {
   text-align: center;
 }
+
+.aboutmetext {
+  background-color: rgba(255,255,255,0.5);
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  font-size: 20px;
+  color: black;
+}
